@@ -226,7 +226,8 @@ rockspiral=c(              4, 5,                  11,12,13,
 # In this example, there are 10 "big times", rate1 is 2, rate3 is 60. Cloudvec
 # can be changed to draw whatever you like.  
 
-"""
+
+
 for(i in 1:3){
   pmt = system.time((drop = one.cycle(dropmat1=drop, cloudvec=L1cloudvec, raindrops=30, 
       rate1=35, rate2=1, rock1=rock)))
@@ -272,9 +273,11 @@ for(i in 1:10){
 }
 
 
-"""
+# resets dropmatrix to just zeros. There is no more water.
+drop=matrix(rep(0,n^2),ncol=n)
 
-"""
+
+
 for(i in 1:20){
   pmt = system.time((drop = one.cycle(dropmat1=drop, cloudvec=dropmaze, raindrops=150, 
                                       rate1=.05, rate2=20, rock1=rockmaze)))
@@ -288,8 +291,12 @@ for(i in 1:10){
   draw.rain(drop, blue)
   Sys.sleep(2-pmt[3])
 }
-"""
-"""
+
+# resets dropmatrix to just zeros. There is no more water.
+drop=matrix(rep(0,n^2),ncol=n)
+
+
+
 for(i in 1:10){
   pmt = system.time((drop = one.cycle(dropmat1=drop, cloudvec=dropsigma, raindrops=300, 
                                       rate1=.05, rate2=10, rock1=rocksigma)))
@@ -303,7 +310,13 @@ for(i in 1:10){
   draw.rain(drop, blue)
   Sys.sleep(2-pmt[3])
 }
-"""
+
+# resets dropmatrix to just zeros. There is no more water.
+drop=matrix(rep(0,n^2),ncol=n)
+
+
+
+
 for(i in 1:10){
   pmt = system.time((drop = one.cycle(dropmat1=drop, cloudvec=dropspiral, raindrops=300, 
                                       rate1=.05, rate2=10, rock1=rockspiral)))
@@ -313,10 +326,12 @@ for(i in 1:10){
 
 for(i in 1:10){
   pmt = system.time((drop = one.cycle(dropmat1=drop, cloudvec=dropspiral, raindrops=0, 
-                                      rate1=1, rate2=50, rock1=rockspiral)))
+                                      rate1=0.01, rate2=50, rock1=rockspiral)))
   draw.rain(drop, blue)
   Sys.sleep(2-pmt[3])
 }
+
+
 
 drop
 
