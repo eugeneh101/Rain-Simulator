@@ -4,6 +4,12 @@ SUMMARY: Hello! This is my first project (built for fun!). It simulates rain dro
 
 HOW TO RUN IT: Just fork and clone the repo and run the entire code. Then sit back and watch the different shapes you'll see it begin with a *SECRET* word, maze, uppercase sigma, and spiral.  
 
+<img src="secret_word.png">
+<img src="secret_word_faded.png">
+<img src="sigma.png">
+<img src="maze.png">
+<img src="spiral.png">
+
 MOTIVATION: On day, my good friend asked me, "Oh whatever shall I do for my data science project? My professor gave me only 2 instructions: program something and use statistics." I proposed that we simulate rain landing on tiles because it sounded like a cool idea we learned about the Poisson Distribution in Probability (stat 134). Then she told me, "Oh but Eugene. That's a great idea! But it's not reality--I don't want to program something so complex." Hence, out of my own curiosity, I programmed this Rain Simulator nonstop over the free time I had--the 3 days of Thanksgiving break. My mom, with her clear-headedness, asked me, "What in the world are you doing during Thanksgiving break?" Upon telling her that I was programming a rain simulator, she told me she didn't want to see it... Upon telling me friend how this program works and sending her the code, she was ecstatic. She told me, "Thanks!" and explained she'll use the code for sports analysis. Little did I know later, she turned it in as a semester Final Project and received an A. I was not angry but rather flattered. She later bought me dinner.  
 
 CHALLENGES: I had never written much extensive R code (even during class because the problems tend to be solved, canned questions). I myself had no idea how to begin, and I never imagined that the code would be this complex. Since it was my first REAL project, the code is not super ideal, but it runs with the sufficiently readable documentation. This project took no less than 8 helper functions to build the matrix that I turned into a heatmap. The heatmap shows how rain dissipates over time.  
